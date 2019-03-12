@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .photo1{
+            width: 640px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .photo1>h1{
+            color: white;
+            position: absolute;
+            right: 25px;
+            bottom: 20px;
+            font-weight: 500;
+
+        }
+        .photo1>div>p{
+            color: rgba(0,0,0,0);
+        }
+        .p1{
+            width: 260px;
+            height: 64px;
+            border-right:1px solid rgba(0,0,0,0) ;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+
+        }
+        .photo1:hover p{
+            color: white;
+            transition: all .5s linear;
+        }
+        .photo1:hover .p1{
+            transform: translate(30px,0);
+            transition: all .5s linear;
+            border-right: 1px solid white;
+        }
+        .photo1:after{
+            content:"";
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0);
+            transition: all .5s linear;
+        }
+        .photo1:hover:after{
+            background-color: rgba(0,0,0,.5);
+            transition: all .5s linear;
+        }
+        .photo1>img{
+            width: 720px;
+            position: absolute;
+            right: -10px;
+            bottom: -20px;
+        }
+        .photo1:hover img{
+            transform: scale(0.93);
+            transform-origin: right center;
+            transition: all .3s linear;
+        }
+        /*p2*/
+        .photo2{
+            width: 640px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .photo2:after{
+            content:"";
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0);
+            transition: all .5s linear;
+        }
+        .photo2:hover:after{
+            background-color: rgba(60,131,92,.4);
+            transition: all .5s linear;
+        }
+        .photo2 img{
+            width: 645px;
+            height: 400px;
+            position: absolute;
+            left: -5px;
+            top: 0;
+        }
+        .photo2 h1,div,h3{
+            position: absolute;
+            z-index: 50;
+        }
+        .photo2 h1{
+            left: 30px;
+            top: 40px;
+            color: white;
+            font-weight: 100;
+        }
+        .xian{
+            width: 1px;
+            border-top: 3px solid white;
+            top: 85px;
+            left: 30px;
+            transition: all .5s linear;
+        }
+        .photo2 h3{
+            color: white;
+            font-weight: 100;
+        }
+        .photo2:hover .xian{
+            width: 575px;
+            border-top: 3px solid white;
+            top: 85px;
+            left: 30px;
+            transition: all .5s linear;
+        }
+        .sarah{
+            width: 500px;
+            left: 640px;
+            top: 100px;
+        }
+        .photo2:hover .sarah{
+            left: 30px;
+            transition: all .5s linear;
+        }
+        /*p3*/
+        .photo3{
+            width: 640px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .photo3:after{
+            content:"";
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.4);
+            transition: all .5s linear;
+        }
+        .photo3:hover:after{
+            background-color: rgba(0,0,0,0);
+            transition: all .5s linear;
+        }
+        .photo3 img{
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .photo3 h1,.war,.decent{
+            position: absolute;
+        }
+        .photo3 .war{
+            border: solid 1px rgba(0,0,0,0);
+            width: 550px;
+            height: 280px;
+            left: 45px;
+            top: 60px;
+            text-align: center;
+            transform: scale(0.3);
+            transition: all .5s linear;
+        }
+        .car{
+            width: 550px;
+            height: 280px;
+            left: 45px;
+            top: 60px;
+            text-align: center;
+        }
+        .photo3 h3{
+            color: white;
+            font-weight: 100;
+        }
+        .decent{
+            width: 500px;
+            text-align: center;
+        }
+        .photo3 h1{
+            color: white;
+            left: 161px;
+            top: 150px;
+                 }
+        .photo3 h3{
+            color:rgba(0,0,0,0);
+            left: 25px;
+            top: 150px;
+        }
+        .photo3:hover .war{
+            transform:scale(1);
+            transition: all .5s linear;
+            border: solid 1px white;
+        }
+        .photo3:hover .decent>h3{
+            color: white;
+            transition: all .5s linear;
+        }
+        .photo3:hover h1 {
+            top: 90px;
+            transition: all .5s linear;
+        }
+        /*p4*/
+        .photo4{
+            width: 640px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .photo4:after{
+            content:"";
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0);
+            transition: all .5s linear;
+        }
+        .photo4:hover:after{
+            background-color: rgba(96,110,95,.4);
+            transition: all .5s linear;
+        }
+        .photo4 img{
+            width: 720px;
+            height: 450px;
+            position: absolute;
+            left: -36px;
+            top: -23px;
+            transition: all .5s linear;
+        }
+        .photo4:hover img{
+            transform: scale(0.9);
+            transition: all .5s linear;
+        }
+        .photo4 .wild,.hen,.shu,.romeo{
+            position: absolute;
+        }
+        .photo4 h1{
+            color: white;
+        }
+        .photo4 h3{
+            color: white;
+            font-weight:100 ;
+        }
+        .wild{
+            left: 213px;
+            top: 110px;
+            transition: all .5s linear;
+        }
+        .romeo{
+            width: 630px;
+            text-align: center;
+            top: 235px;
+            transition: all .5s linear;
+        }
+        .hen,.shu{
+            width: 520px;
+            border-top: solid 3px white;
+            left: 50px;
+            top: 200px; ;
+            transition: all .5s linear;
+        }
+        .photo4:hover .hen{
+            transform: rotate(45deg);
+            transition: all .5s linear;
+        }
+        .photo4:hover .shu{
+            transform: rotate(-45deg);
+            transition: all .5s linear;
+        }
+        .photo4:hover .wild{
+            transform: translate(0,20px);
+        }
+        .photo4:hover .romeo{
+            transform: translate(0,-20px);
+        }
+/*p5*/
+        .photo5{
+            width: 640px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .photo5:after{
+            content:"";
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 400px;
+            background-color: rgba(0,0,0,1);
+            transition: all .5s linear;
+        }
+        .photo5:hover:after{
+            transform: translate(0,-400px);
+            background-color: rgba(96,110,95,.4);
+            transition: all .5s linear;
+        }
+        .photo5 img{
+            width: 640px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .5s linear;
+        }
+        .hos,.sad,.she{
+           position: absolute;
+        }
+        .photo5 h3{
+            color: rgba(0,0,0,0);
+            font-weight: 100;
+            transition: all .5s linear;
+        }
+        .hos{
+            top: 179px;
+            left: 226px;
+            transition: all .5s linear;
+        }
+        .sad{
+            width: 330px;
+            left: 160px;
+            bottom: 70px;
+            transition: all .5s linear;
+        }
+        .she{
+            width: 200px;
+            left: 220px;
+            bottom: 50px;
+            transition: all .5s linear;
+        }
+        .photo5:hover .sad{
+            bottom: 80px;
+            transition: all .5s linear;
+        }
+        .photo5:hover .she{
+            bottom: 60px;
+            transition: all .5s linear;
+        }
+        .photo5:hover h3{
+            color: white;
+            transition: all .5s linear;
+        }
+        .photo5:hover h1{
+            color: white;
+            transition: all .5s linear;
+        }
+        .photo5:hover .hos {
+            top: 140px;
+            transition: all .5s linear;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="photo1">
+        <img src="img/lanrenzhijia11.jpg" alt="">
+        <div class="p1">
+            <p>MILO WENT TO ZHE WOODS.HE</p>
+            <p>TOOK A FUN RIDE AN NEVER</p>
+            <p>CAME BACK.</p>
+        </div>
+        <h1>
+            FAITHFULMILO
+        </h1>
+    </div>
+<div class="photo2">
+    <img src="img/lanrenzhijia13.jpg" alt="">
+    <h1>FREESARAH</h1>
+    <div class="xian"></div>
+    <div class="sarah">
+        <h3>Sarah likes to watch clouds. She's quite depressed.</h3>
+    </div>
+
+</div>
+<div class="photo3">
+    <img src="img/lanrenzhijia8.jpg" alt="">
+    <div class="war"><div class="decent">
+        <h3>Oscar is a decent man. He used to clean porches with pleasure.</h3>
+    </div></div>
+        <div class="car">
+            <h1>WARMOSCAR</h1>
+        </div>
+</div>
+<div class="photo4">
+    <img src="img/lanrenzhijia5.jpg" alt="">
+    <div class="wild"><h1>WILDROMEO</h1></div>
+    <div class="hen"></div>
+    <div class="shu"></div>
+    <div class="romeo">
+        <h3>Romeo never knows what he wants. He seemed to be very cross about something.</h3>
+    </div>
+</div>
+<div class="photo5">
+    <img src="img/lanrenzhijia2.jpg" alt="">
+    <div class="hos">
+        <h1>HOSLSADIE</h1>
+    </div>
+    <div class="sad">
+        <h3>Sadie never took her eyes off me. </h3>
+    </div>
+        <div class="she">
+            <h3>She had a dark soul.</h3>
+        </div>
+
+
+</div>
+</body>
+</html>
